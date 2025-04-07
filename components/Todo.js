@@ -20,8 +20,6 @@ class Todo {
     this._todoLabel = this._todoElement.querySelector(".todo__label");
     this._todoCheckboxEl.checked = this._data.completed;
 
-    // Apply id and for attributes.
-    // The id will initially be undefined for new todos.
     this._todoCheckboxEl.id = `todo-${this._data.id}`;
     this._todoLabel.setAttribute("for", `todo-${this._data.id}`);
   }
