@@ -5,7 +5,6 @@ const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopup.querySelector(".popup__form");
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
-//const todoTemplate = document.querySelector("#todo-template");
 const todosList = document.querySelector(".todos__list");
 
 const openModal = (modal) => {
@@ -20,19 +19,6 @@ const closeModal = (modal) => {
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template");
   const todoElement = todo.getView();
-
-  /* 
-  // If a due date has been set, parsing this it with `new Date` will return a
-  // number. If so, we display a string version of the due date in the todo.
-  const dueDate = new Date(data.date);
-  if (!isNaN(dueDate)) {
-    todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })}`;
-  }
-*/
 
   return todoElement;
 };
