@@ -7,9 +7,9 @@ The Todo App project, is about taking the existing code and organizing it. By cr
 The Todo App lets you:
 
 - Add things needing to be done
-- Can include a certain date, but not nesscary
-- Check and un-check todo
-- Delete todo, when completed
+- Can include a certain date, but not necessary
+- Check and uncheck todo
+- Delete todo when completed
 
 ## Technology
 
@@ -24,7 +24,7 @@ Below is a list of what is used in this project:
     - escape key to close modal _Add New ToDo_.
   - edit of to do items.
   - adding/deleting todos.
-  - checking/un-checking todos.
+  - checking/unchecking todos.
 - Form Validation:
 
   - error indication.
