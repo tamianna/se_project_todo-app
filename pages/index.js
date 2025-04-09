@@ -10,8 +10,17 @@ const addTodoForm = addTodoPopup.querySelector(".popup__form");
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    if (addTodoPopup) {
+      closeModal(addTodoPopup);
+    }
+  }
+}
+
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
+  document.addEventListener("keydown", handleEscapeKey);
 };
 
 const closeModal = (modal) => {
