@@ -15,11 +15,11 @@ class FormValidator {
     }
   }
 
-  _showInputError(inputElement) {
+  _showInputError(inputElement, errorMessage) {
     this._errorElementId = `#${inputElement.id}-error`;
     this._errorElement = this._formElement.querySelector(this._errorElementId);
     inputElement.classList.add(this._inputErrorClass);
-    this._errorElement.textContent = this._errorMessage;
+    this._errorElement.textContent = errorMessage;
     this._errorElement.classList.add(this._errorClass);
   }
 
