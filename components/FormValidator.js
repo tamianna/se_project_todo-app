@@ -73,6 +73,8 @@ class FormValidator {
     this._setEventListeners();
   }
 
+  // reset validation- to reset the form and disable button w/out erasing
+  // entered data, if exited by the close button or pressing escape below...
   resetValidation() {
     this._formElement.reset();
 
