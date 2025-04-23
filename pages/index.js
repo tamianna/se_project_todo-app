@@ -20,8 +20,7 @@ const generateTodo = (data) => {
 const newItem = new Section({
   items: iniTodos,
   renderer: (item) => {
-    const todo = generateTodo(item);
-    newItem.addItem(todo);
+    renderTodo(item);
   },
   containerSelector: ".todos__list",
 });
@@ -40,8 +39,7 @@ const addNewTodoPopup = new PopupWithForm({
 
     const id = uuidv4();
     const values = { name, date, id };
-    const todo = generateTodo(values);
-    newItem.addItem(todo);
+    renderTodo(values);
 
     addNewTodoPopup.close();
 
@@ -63,6 +61,11 @@ function handleDelete(completed) {
     todoCounter.updateCompleted(false);
   }
   todoCounter.updateTotal(false);
+}
+
+function renderTodo(todoData) {
+  const todo = generateTodo(todoData);
+  newItem.addItem(todo);
 }
 
 addNewTodoPopup.setEventListeners();
